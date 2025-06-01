@@ -1,0 +1,6 @@
+{
+  "name": "mono_frappe",
+  "service": "frappe",
+  "dockerComposeFile": "docker-compose.yml",
+  "workspaceFolder": "/home/frappe/bench/mono_frappe"
+}

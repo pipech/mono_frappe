@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  frappe:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    user: frappe
+    volumes:
+      - ..:/home/frappe/bench/mono_frappe:cached
+      - frappe-logs-vol:/home/frappe/bench/logs
+      - frappe-sites-vol:/home/frappe/bench/sites
+    command: "tail -f /dev/null"
+
+volumes:
+  frappe-logs-vol:
+  frappe-sites-vol:
